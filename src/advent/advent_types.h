@@ -11,7 +11,7 @@ using TestFunc = std::function<ResultType()>;
 struct Test {
     TestFunc func;
     ResultType execute() { return func(); }
-	explicit TestExecutable(TestFunc func_) : func{func_} {};
+	explicit Test(TestFunc func_) : func{func_} {};
 };
 
 struct VerificationTest {
