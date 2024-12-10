@@ -1,6 +1,6 @@
 #pragma once
 
-#include "advent_types.h"
+namespace Advent {
+    void run_tests();
+}
 
-void run_tests();
-Advent::TestResult run_test(const Advent::VerificationTest& test);

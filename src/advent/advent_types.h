@@ -2,6 +2,9 @@
 
 #include <string>
 #include <functional>
+#include <variant>
+#include <optional>
+#include <chrono>
 
 namespace Advent {
 
@@ -19,11 +22,12 @@ struct VerificationTest {
     Test test_func;
 	std::optional<std::string> expected_result;
     VerificationTest(std::string name_, TestFunc func) : name(std::move(name_)), test_func(func) {};
+    VerificationTest(std::string name_, TestFunc func, std::string expected_result_) : name(std::move(name_)), test_func(func), expected_result(std::move(expected_result_)) {};
 };
 
 enum class TestStatus : char {
     UNKNOWN,
-    PASS,
+    PASSED,
     FAILED,
     FILTERED
 };

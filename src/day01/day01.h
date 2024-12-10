@@ -2,5 +2,5 @@
 
 #include "advent/advent_types.h"
 
-ResultType day01_part01();
-ResultType day01_part02();
+Advent::ResultType day01_part1();
+Advent::ResultType day01_part2();

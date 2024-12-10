@@ -1,9 +1,15 @@
 #pragma once
 
-#include "advent_types.h"
+#include "day01/day01.h"
+#include "day02/day02.h"
 
-VerificationTest make_test(std::string name, TestFunc test_func, std::optional<std::string> expected_result);
+Advent::VerificationTest make_test(std::string name, Advent::TestFunc test_func, std::string expected_result);
 
-static const VerificationTests tests[] = {
+#define TESTCASE(func_name, expected_result) make_test(std::string{ #func_name }, func_name, expected_result)
 
-}
+static const std::array<Advent::VerificationTest, 4> tests = {
+    TESTCASE(day01_part1, "11"),
+    TESTCASE(day01_part2, "31"),
+    TESTCASE(day02_part1, "11"),
+    TESTCASE(day02_part2, "11")
+};

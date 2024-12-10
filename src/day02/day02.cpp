@@ -1,4 +1,4 @@
-#include "day01.h"
+#include "day02.h"
 
 #include <vector>
 #include <map>
@@ -66,12 +66,13 @@ namespace {
     }
 }
 
-Advent::ResultType day01_part1() {
+Advent::ResultType day02_part1() {
     std::ifstream input = open_puzzle_input(1);
     return solve_p1(input);
 }
 
-Advent::ResultType day01_part2() {
+Advent::ResultType day02_part2() {
     std::ifstream input = open_puzzle_input(1);
     return solve_p2(input);
 }
+
