@@ -75,3 +75,13 @@ Advent::ResultType day01_part2() {
     std::ifstream input = open_puzzle_input(1);
     return solve_p2(input);
 }
+
+Advent::ResultType day01_part1_example() {
+    std::ifstream input = open_example_input(1);
+    return solve_p1(input);
+}
+
+Advent::ResultType day01_part2_example() {
+    std::ifstream input = open_example_input(1);
+    return solve_p2(input);
+}

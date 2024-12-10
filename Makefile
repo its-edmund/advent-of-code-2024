@@ -18,12 +18,8 @@ SRCS := $(wildcard ${SRC_DIR}/**/*.cpp) src/main.cpp
 # OBJS := $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(notdir $(SRCS)))
 OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
 
-$(info SRCS = $(SRCS))
-
-$(info OBJS = $(OBJS))
-
 # Default Target
-all: $(TARGET)
+all: test
 
 # Build Target
 $(TARGET): $(OBJS)
@@ -49,6 +45,12 @@ clean:
 run: $(TARGET)
 	./$(TARGET)
 
+solve: $(TARGET)
+	./$(TARGET) solve
+
+test: $(TARGET)
+	./$(TARGET) test
+
 # Phony Targets
-.PHONY: all clean run
+.PHONY: all clean run solve test
 

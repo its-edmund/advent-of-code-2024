@@ -24,7 +24,12 @@ static std::ifstream open_input(const std::string& filename) {
     return result;
 }
 
+static std::ifstream open_example_input(int day) {
+    std::string file_name = std::format("src/day{:02}/day{:02}_example.txt", day, day);
+    return open_input(file_name);
+}
+
 static std::ifstream open_puzzle_input(int day) {
-    std::string file_name = std::format("src/day{:02}/day{:02}_test.txt", day, day);
+    std::string file_name = std::format("src/day{:02}/day{:02}.txt", day, day);
     return open_input(file_name);
 }
